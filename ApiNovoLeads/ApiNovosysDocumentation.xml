@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiNovoLeads</name>
+    </assembly>
+    <members>
+        <member name="T:ApiNovoLeads.Controllers.ContactoController">
+            <summary>
+            Contactos Controller
+            </summary>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.ContactoController.Get">
+            <summary>
+            Contactos Get
+            </summary>
+            <returns>lista de contactos</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.ContactoController.GetById(System.Int32)">
+            <summary>
+            Obtener la categoría por el Id
+            </summary>
+            <param name="Id"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.ContactoController.Add(ApiNovoLeads.Dto.ContactoAddDto)">
+            <summary>
+            Agregar una nuevo contacto
+            </summary>
+            <param name="dto"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.ContactoController.Update(ApiNovoLeads.Dto.ContactoUpdateDto)">
+            <summary>
+            Actualizar contacto
+            </summary>
+            <param name="dto"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.ContactoController.Delete(System.Int32)">
+            <summary>
+            Eliminar un contacto por Id
+            </summary>
+            <param name="Id"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.SeguimientoController.Get">
+            <summary>
+            Obtener Seguimientos
+            </summary>
+            <returns>lista de seguimientos</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.SeguimientoController.GetById(System.Int32)">
+            <summary>
+            Obtener seguimiento por el Id
+            </summary>
+            <param name="seguimientoId"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.SeguimientoController.Add(ApiNovoLeads.Dto.Seguimineto.SeguimientoCreateDto)">
+            <summary>
+            Agregar un nuevo seguimiento
+            </summary>
+            <param name="DTO"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.SeguimientoController.Update(ApiNovoLeads.Seguimiento)">
+            <summary>
+            Actualizar seguimiento
+            </summary>
+            <param name="dto"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.SeguimientoController.Delete(System.Int32)">
+            <summary>
+            Eliminar un seguimiento por id
+            </summary>
+            <param name="seguimientoId"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="T:ApiNovoLeads.Controllers.TipoSeguimientoController">
+            <summary>
+            Tipo De Seguimiento Controller
+            </summary>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.TipoSeguimientoController.Get">
+            <summary>
+            Tipos de seguimiento Get
+            </summary>
+            <returns>lista de tipos de seguimiento</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.TipoSeguimientoController.GetById(System.Int32)">
+            <summary>
+            Obtener tipo de seguimiento por el Id
+            </summary>
+            <param name="Id"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.TipoSeguimientoController.Add(ApiNovoLeads.Dto.TipoSeguimiento.TipoSeguimientoAddDto)">
+            <summary>
+            Agregar una nuevo tipo de seguimiento
+            </summary>
+            <param name="dto"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.TipoSeguimientoController.Update(ApiNovoLeads.Dto.TipoSeguimiento.TipoSeguimientoUpdateDto)">
+            <summary>
+            Actualizar tipo de seguimiento
+            </summary>
+            <param name="dto"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.TipoSeguimientoController.Delete(System.Int32)">
+            <summary>
+            Eliminar un tipo de seguimiento por Id
+            </summary>
+            <param name="Id"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.UsuarioController.Get">
+            <summary>
+            Obtener todos los usuarios
+            </summary>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.UsuarioController.GetById(System.Int32)">
+            <summary>
+            Obtener usuario por Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.UsuarioController.Add(ApiNovoLeads.Dto.Usuario.UsuarioAddDto)">
+            <summary>
+            Registro de usuario
+            </summary>
+            <param name="dto"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.UsuarioController.Login(ApiNovoLeads.Dto.Usuario.UsuarioLoginDto)">
+            <summary>
+            Login con UsuarioVar y PasswordVar
+            </summary>
+            <param name="dto"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.UsuarioController.Update(ApiNovoLeads.Dto.Usuario.UsuarioUpdateDto)">
+            <summary>
+            Actualizar usuario
+            </summary>
+            <param name="dto"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+        <member name="M:ApiNovoLeads.Controllers.UsuarioController.Delete(System.Int32)">
+            <summary>
+            Eliminar un usuario por Id
+            </summary>
+            <param name="Id"></param>
+            <returns>StatusCode 200</returns>
+        </member>
+    </members>
+</doc>
