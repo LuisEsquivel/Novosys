@@ -1,4 +1,4 @@
-﻿namespace NovoLeads.Services
+﻿namespace Novosys.Services
 {
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;

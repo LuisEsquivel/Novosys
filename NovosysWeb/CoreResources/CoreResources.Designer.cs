@@ -61,7 +61,25 @@ namespace NovosysWEB.CoreResources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a .
+        ///   Busca una cadena traducida similar a api.
+        /// </summary>
+        internal static string Prefix {
+            get {
+                return ResourceManager.GetString("Prefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a productos.
+        /// </summary>
+        internal static string ProductosController {
+            get {
+                return ResourceManager.GetString("ProductosController", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a http://192.168.200.100:44325/.
         /// </summary>
         internal static string UrlBase {
             get {
