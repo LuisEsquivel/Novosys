@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.vb" Inherits="NovosysWeb.MvcApplication" Language="VB" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="NovosysWEB.MvcApplication" Language="C#" %>
