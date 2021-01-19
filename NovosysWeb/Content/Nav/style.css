@@ -41,7 +41,7 @@ body {
     transition: all 0.4s;
     width: 100%;
     z-index: 99;
-    padding: 18px 0;
+    padding: 50px 0;
 }
 
 .mainmenu {
@@ -108,25 +108,17 @@ body {
 /*--------------------------------------
 -------- HERO AREA CSS START --------
 ---------------------------------------*/
+
 .hero-area {
     background-image: url(../../img/fotobackground.jpg);
     background-attachment: fixed;
     background-size: cover;
     padding-top: 90px;
-    min-height: 700px;
+    margin-top: -15px;
+    min-height: 750px;
     color: var(--white-color);
 }
 
-    .hero-area::before {
-        content: "";
-        top: 0;
-        left: 0;
-        opacity: 0.85;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        position: absolute;
-    }
 /*------------------------------------
 --------- HERO AREA CSS END ---------
 ------------------------------------*/
