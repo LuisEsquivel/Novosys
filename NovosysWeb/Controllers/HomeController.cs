@@ -50,7 +50,7 @@ namespace NovosysWEB.Controllers
 
 
                 //if (generals.SendEmailSMTP(formCollection))
-                if (result != null)
+                if (result == "success")
                 {
                     TempData["message"] = "Correo Enviado";
                     ViewBag.message = TempData["message"];
