@@ -19,12 +19,13 @@ namespace Novosys.Services
 
 
 
-        public List<T> Get<T>(string entity)
+        public List<T> Get<T>(string entity, Int32 id = 0)
         {
             List<T> objeto = null;
 
-
-            var url = CoreResources.UrlBase + CoreResources.Prefix + "/" + entity + "/get";
+            var method = "/get";
+            if (id > 0) method = "/getbyid/"+id;
+            var url = CoreResources.UrlBase + CoreResources.Prefix + "/" + entity + method;
 
             try
             {

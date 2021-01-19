@@ -1,0 +1,206 @@
+﻿@model NovosysWeb.Models.Producto
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+    //var MetaDataPrincipal = TempData["MetaDataPrincipal"];
+    //TempData.Keep("MetaDataPrincipal");
+
+
+    //var MetaTag = Model.META_PRODS.ToString() + " | " + MetaDataPrincipal.ToString();
+
+
+}
+
+@*@section SeoRender{
+    @{
+
+        <meta name="description" content="@MetaTag.ToString()" />
+        <link rel="canonical" href="https://plafones.com/" />
+        <meta property="og:locale" content="es_MX" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content=" Plafones e Interiores " />
+        <meta property="og:description" content="@MetaTag.ToString()" />
+        <meta property="og:url" content="https://plafones.com/" />
+        <meta property="og:site_name" content="Plafones e Interiores" />
+        <meta property="article:modified_time" content="2020-09-26T05:32:14+00:00" />
+        <meta property="og:image" content="https://plafones.com/img/NewIndex/logoplafones.png" />
+    }
+
+}*@
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT382V4"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<script>
+
+
+    function ZoomImage(src, alt) {
+
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        modal.style.display = "block";
+        modalImg.src = src;
+        captionText.innerHTML = alt;
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    }
+
+</script>
+
+
+
+
+
+<section class="container">
+    <h1 class="text-center mt-3 Title-sections font-weight-bold">¡Comunicate con Nosotros y pregunta por el precio especial!</h1>
+    <div class="row">
+
+
+        <div class="col-md-8 mt-5">
+
+            <div class="card" style="height:100%; overflow-y:scroll;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 text-center p-3">
+                        <img id="myImg" src="@Url.Content(Model.RutaImagenVar)"
+                             alt="@Url.Content(Model.NombreVar)"
+                             onclick="ZoomImage(this.src, this.alt);"
+                             class="FormaDeContactoDetallesProductos img-fluid rounded">
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-8" style="height:100%;">
+                        <div class="card-body">
+                            <div class="card-title h5">
+                                @{
+                                    if (Model.NombreVar != String.Empty && Model.NombreVar != null)
+                                    {
+                                        <div class="row">
+                                            <h4 class="font-weight-bold" style="color: #F08034; font-size: 19px;">
+                                                @Html.DisplayNameFor(model => model.NombreVar):
+                                                @{
+                                                    ViewBag.Title = Model.NombreVar.ToString();
+                                                }
+                                            </h4>
+                                            <h4 class="ml-2 pt-sanz-text font-weight-bold"> @Html.DisplayFor(model => model.NombreVar)</h4>
+                                        </div>
+
+
+                                    }
+                                }
+                            </div>
+                            <p class="card-text">
+                                @{
+  
+                                    if (Model.DescripcionLargaVar != string.Empty && Model.DescripcionLargaVar != null)
+                                    {
+                                        <div class="row">
+                                            <h5 class="font-weight-bold" style="color: #F08034; font-size: 19px;">@Html.DisplayNameFor(model => model.ALTO_VAR): </h5>
+                                            <h5 class="ml-2 pt-sanz-text">@Html.DisplayFor(model => model.DescripcionLargaVar) </h5>
+                                        </div>
+                                    }
+
+          
+                                }
+
+
+                                @*@using (Html.BeginForm("DataSheet", "Productos", FormMethod.Post, new { target = "_blank" }))
+                                {
+                                    <input name="FichaTecnicaName" type="hidden" value="@Model.FICHA_TECNICA_URL_VAR " />
+                                    <button class="btn btn-danger btn-sm mb-3" type="submit">
+                                        <img src="~/img/DisenioDeplegadoProds/icono-ficha-tecnica-1.png" width="40" height="60">
+                                    </button>
+                                }*@
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 col-sm-12 mt-5 d-flex justify-content-center">
+
+            <div class="row d-flex justify-content-center">
+
+                <form id="form" class="w-100 ml-auto">
+                    <div class="row">
+
+                        <!-- <div class="FormaDeContactoDetallesProductos"> -->
+                        <div class="text-white container-fluid" style="width:100%; border-radius: 20px; background-color:#001049;">
+                            <div class="form-group text-center">
+                                <h3 class="mt-2">¡Contactanos!</h3>
+                            </div>
+                            <div class="form-group">
+                                <center>
+                                    <h5> Nombre (requerido)</h5>
+                                    <input type="text" required size="50" maxlength="50" class="form-control" placeholder="Nombre" name="NOMBRE_VAR" />
+                                </center>
+                            </div>
+                            <div class="form-group">
+                                <center>
+                                    <h5>Email (requerido)</h5>
+                                    <input type="email" required size="80" maxlength="80" class="form-control" placeholder="Email" name="EMAIL_VAR" />
+                                </center>
+                            </div>
+                            <div class="form-group">
+                                <center>
+                                    <h5>Teléfono</h5>
+                                    <input type="text" class="form-control soloNumeros" placeholder="Teléfono" name="TELEFONO_VAR" maxlength="15" minlength="8" pattern=".{8,}" title="8 caracteres minimo" />
+                                </center>
+                            </div>
+                            <div class="form-group">
+                                <center>
+                                    <h6>Mensaje</h6>
+                                    <textarea rows="3" type="text" class="form-control" placeholder="Mensaje" name="MENSAJE_VAR" maxlength="200" minlength="10" pattern=".{10,}" required title="10 caracteres minimo"></textarea>
+                                </center>
+                            </div>
+                            <div class="form-group">
+                                <center>
+                                    <input type="hidden" value="Productos/Details" name="ORIGEN_VAR" />
+                                    <input type="hidden" value="@Model.CVE_PROD_VAR" name="CVE_PROD_VAR" />
+                                    <input type="hidden" value="@Model.NOM_PROD_VAR" name="NOM_PROD_VAR" />
+                                    <button class="btn btn-danger" type="submit" onclick="Add('/Home/Email')">Enviar</button>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
