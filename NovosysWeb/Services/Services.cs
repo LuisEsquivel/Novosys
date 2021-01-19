@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using NovoLeadsWeb.CoreResources;
+using NovosysWeb.CoreResources;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
-namespace NovoLeads.Services
+namespace Novosys.Services
 {
 
 
@@ -19,12 +19,13 @@ namespace NovoLeads.Services
 
 
 
-        public List<T> Get<T>(string entity)
+        public List<T> Get<T>(string entity, Int32 id = 0)
         {
             List<T> objeto = null;
 
-
-            var url = CoreResources.UrlBase + CoreResources.Prefix + "/" + entity + "/get";
+            var method = "/get";
+            if (id > 0) method = "/getbyid/"+id;
+            var url = CoreResources.UrlBase + CoreResources.Prefix + "/" + entity + method;
 
             try
             {

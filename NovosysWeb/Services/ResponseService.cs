@@ -1,4 +1,4 @@
-﻿namespace NovoLeads.Services
+﻿namespace Novosys.Services
 {
     public class ResponseService
     {

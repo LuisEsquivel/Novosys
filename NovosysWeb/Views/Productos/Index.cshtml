@@ -1,0 +1,123 @@
+﻿@model IEnumerable<NovosysWeb.Models.Producto>
+
+@{
+    ViewBag.Title = "TABLAROCA, DUROCK Y PLAFONES EN MONTERREY";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    //var DOLLAR_DEC = Convert.ToDecimal(TempData["DOLLAR_DEC"].ToString());
+    //TempData.Keep("DOLLAR_DEC");
+
+    //var BmxMsg = TempData["BmxMsg"];
+    //TempData.Keep("BmxMsg");
+
+
+    //var MetaDataProductosIndex = TempData["MetaDataProductosIndex"];
+    //TempData.Keep("MetaDataProductosIndex");
+
+}
+
+
+@*@section SeoRender{
+
+    @{
+
+        <meta name="description" content="@MetaDataProductosIndex.ToString()" />
+        <link rel="canonical" href="https://plafones.com/" />
+        <meta property="og:locale" content="es_MX" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content=" Plafones e Interiores " />
+        <meta property="og:description" content="@MetaDataProductosIndex.ToString()" />
+        <meta property="og:url" content="https://plafones.com/" />
+        <meta property="og:site_name" content="Plafones e Interiores" />
+        <meta property="article:modified_time" content="2020-09-26T05:32:14+00:00" />
+        <meta property="og:image" content="https://plafones.com/img/NewIndex/logoplafones.png" />
+    }*@
+
+@*}*@
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT382V4"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<script type="text/javascript">
+
+
+    var selectedProd;
+
+    function addCompare(cveProd) {
+        selectedProd = cveProd;
+        document.getElementById('btn').click();
+    }
+
+    $(document).ready(function () {
+
+
+        $("#btn").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/Productos/AddCompare",
+                data: "selectedValue=" + selectedProd,
+                datatype: "json",
+                success: function (msg) {
+                    alert(msg);
+                }
+            });
+        });
+
+
+    });
+
+
+</script>
+
+
+
+
+
+<button id="btn" style="display:none;"></button>
+
+<div class="container body-content mt-5">
+
+    <div class="containerIndex row my-flex-card">
+
+        <div class="col-md-12" style="border-bottom: #F08034 4px solid;">
+            <h2 class="Title-sections font-weight-bold">Productos</h2>
+        </div>
+
+        @foreach (var item in Model)
+        {
+
+            <div class="col-lg-4 col-sm-6 card-bordes mt-4">
+                <figure class="card card-product">
+                    @*<h4 class="text-right"><a href="javascript:addCompare('@item.CVE_PROD_VAR')" class="btn btn-success btn-sm float-right">+</a></h4>*@
+                    <div class="img-wrap">
+                        <a href="~/Producto/Detalle/@item.CveProductoInt">
+                            <img src="@Url.Content(item.RutaImagenVar)" alt="@Url.Content(item.AltImagenVar)" class="img-fluid">
+                        </a>
+                    </div>
+  
+                    <figcaption class="info-wrap img-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <a href="~/Producto/Detalle/@item.CveProductoInt">
+                                    <h5 class="product-name">@Html.DisplayFor(modelItem => item.NombreVar)</h5>
+                                </a>
+                            </div>
+                        </div>
+
+                       
+                    </figcaption>
+                </figure> <!-- card // -->
+            </div> <!-- col // -->
+
+
+        }
+    </div>
+</div>
+
