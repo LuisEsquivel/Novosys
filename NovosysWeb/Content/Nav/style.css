@@ -114,7 +114,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     padding-top: 90px;
-    margin-top: -15px;
+    margin-top: -8%;
     min-height: 750px;
     color: var(--white-color);
 }
