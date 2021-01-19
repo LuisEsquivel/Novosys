@@ -97,7 +97,7 @@
                 <figure class="card card-product">
                     @*<h4 class="text-right"><a href="javascript:addCompare('@item.CVE_PROD_VAR')" class="btn btn-success btn-sm float-right">+</a></h4>*@
                     <div class="img-wrap">
-                        <a href="~/Producto/Detalle/@item.CveProductoInt">
+                        <a href="~/Productos/Detalle/@item.CveProductoInt">
                             <img src="@Url.Content(item.RutaImagenVar)" alt="@Url.Content(item.AltImagenVar)" class="img-fluid">
                         </a>
                     </div>
@@ -105,7 +105,7 @@
                     <figcaption class="info-wrap img-fluid">
                         <div class="row">
                             <div class="col">
-                                <a href="~/Producto/Detalle/@item.CveProductoInt">
+                                <a href="~/Productos/Detalle/@item.CveProductoInt">
                                     <h5 class="product-name">@Html.DisplayFor(modelItem => item.NombreVar)</h5>
                                 </a>
                             </div>

@@ -69,7 +69,10 @@ namespace ApiNovosys.Controllers
             [ProducesResponseType(StatusCodes.Status200OK)]
             public IActionResult GetById(int Id)
             {
-                return Ok(this.response.ResponseValues(this.Response.StatusCode, mapper.Map<ProductoDTO>(repository.GetById(Id))));
+            var row = this.repository.GetById(Id);
+            var listDto = new List<ProductoDTO>();
+            listDto.Add(mapper.Map<ProductoDTO>(row));            
+            return Ok(this.response.ResponseValues(this.Response.StatusCode, listDto ));
             }
 
 

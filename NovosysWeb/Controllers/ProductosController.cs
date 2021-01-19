@@ -38,7 +38,7 @@ namespace NovosysWEB.Controllers
 
             try
             {
-                o = services.Get<Producto>("producto").ToList();
+                o = services.Get<Producto>("productos").ToList();
             }
             catch (Exception)
             {
@@ -51,21 +51,20 @@ namespace NovosysWEB.Controllers
 
   
 
-        [HttpPost]
         public ActionResult Detalle(int id)
         {
-            object o;
+            var o = new Producto();
 
             try
             {
-                o = services.Get<Producto>("producto", id).ToList();
+                o = services.Get<Producto>("productos", id).FirstOrDefault();
             }
             catch (Exception)
             {
                 return null;
             }
 
-            return Json(o, JsonRequestBehavior.AllowGet);
+            return View(o);
         }
 
 
