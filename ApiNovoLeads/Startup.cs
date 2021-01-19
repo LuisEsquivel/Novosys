@@ -79,6 +79,26 @@ namespace ApiNovosys
 
             });
 
+
+
+
+            services.AddSwaggerGen(options =>
+            {
+
+                options.SwaggerDoc("ApiEmail", new Microsoft.OpenApi.Models.OpenApiInfo()
+                {
+                    Title = "Api Novosys",
+                    Version = "v1",
+
+                });
+
+
+                //File Comments Documentation
+                var PathFileCommentsDocumentation = Path.Combine(AppContext.BaseDirectory, "ApiNovosysDocumentation.xml");
+                options.IncludeXmlComments(PathFileCommentsDocumentation);
+
+            });
+
             /*End Documentation*/
 
 
@@ -117,6 +137,7 @@ namespace ApiNovosys
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint("/swagger/ApiProductos/swagger.json", "Api Productos");
+                options.SwaggerEndpoint("/swagger/ApiEmail/swagger.json", "Api Email");
                 options.RoutePrefix = "";
             });
             /*End Documentation*/

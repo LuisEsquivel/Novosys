@@ -1,8 +1,6 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using ApiNovosys;
 using ApiNovosys.Dto.Productos;
 using ApiPlafonesWeb.Helpers;
 using ApiPlafonesWeb.Interface;
@@ -20,7 +18,7 @@ namespace ApiNovosys.Controllers
     [Route("api/productos/")]
     [ApiController]
     [ApiExplorerSettings(GroupName = "ApiProductos")]
-    public class ComoSeEnteroController : ControllerBase
+    public class ProductosController : ControllerBase
     {
  
             private IGenericRepository<Producto> repository;
@@ -28,7 +26,7 @@ namespace ApiNovosys.Controllers
             private Response response;
 
  
-            public ComoSeEnteroController(ApplicationDbContext context, IMapper _mapper)
+            public ProductosController(ApplicationDbContext context, IMapper _mapper)
             {
                 this.mapper = _mapper;
                 this.repository = new GenericRepository<Producto>(context);

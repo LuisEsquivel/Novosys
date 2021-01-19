@@ -61,7 +61,7 @@ namespace Novosys.Services
                 return objeto;
 
             }
-            catch (Exception ex) 
+            catch (Exception) 
             {
                 return objeto;
             }

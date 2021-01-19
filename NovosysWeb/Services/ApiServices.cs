@@ -145,5 +145,45 @@
         }
 
 
+
+
+        public string SendEmail(string urlBase, string Prefijo, string Controller, string Action, object  model)
+        {
+            var message = "";
+
+            try
+            {
+                string url = $"{urlBase}{Prefijo}/{Controller}/{Action}";
+
+                var Client = new HttpClient();
+                var uri = new Uri(Path.Combine(url));
+                var json = JsonConvert.SerializeObject(model);
+                var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage responseTask;
+
+                if (Action == "Add") { responseTask = Client.PostAsync(uri, data).Result; } else { responseTask = Client.PutAsync(uri, data).Result; }
+
+
+                if (responseTask.IsSuccessStatusCode)
+                {
+                    var readTask = responseTask.Content.ReadAsStringAsync().Result;
+                    JObject jsonn = JObject.Parse(readTask.ToString());
+                    message = JsonConvert.DeserializeObject<string>(jsonn["message"].ToString());
+                }
+
+
+                return message;
+
+            }
+            catch { }
+            {
+
+                return message;
+            }
+
+        }
+
+
     }
 }
