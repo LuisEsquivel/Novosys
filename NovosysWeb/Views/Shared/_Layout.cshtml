@@ -4,14 +4,20 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <title>Novosys RFID</title>
 
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Style -->
-    <link href="~/Content/Site.css" rel="stylesheet" />
+    @*<link href="~/Content/Site.css" rel="stylesheet" />*@
+    <link href="~/Content/Nav/slicknav.min.css" rel="stylesheet" />
+    <link href="~/Content/Nav/style.css" rel="stylesheet" />
+    <link href="~/Content/Nav/responsive.css" rel="stylesheet" />
+
+
+    @*<link href="~/Content/Index.css" rel="stylesheet" />*@
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600" rel="stylesheet">
@@ -20,7 +26,7 @@
     <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images//favicon.png" />
+    @*<link rel="shortcut icon" href="assets/images//favicon.png" />*@
 
     @*@Styles.Render("~/Content/css")*@
     @*@Scripts.Render("~/bundles/modernizr")*@
@@ -28,35 +34,63 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container-fluid">
-            <img src="~/img/NOVO_logosmall-1.png" class="logo-brand" alt="logo">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="~/img/menu.svg">
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a style="color: #F08034" class="nav-link" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Consultoria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Productos RFID</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Videotutoriales</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
-                </ul>
+    <header class="header">
+        <div class="container-fluid menu-animation">
+            <div class="row flexbox-center">
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="logo">
+                        <a href="#home" class="text-white"><img src="~/Img/NOVO_logosmall-1.png" alt="logo" /></a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-9 col-6">
+                    <div class="responsive-menu"></div>
+                    <div class="mainmenu">
+                        <ul id="primary-menu">
+                            <li><a style="color: #F08034;" class="nav-link active" href="#">Inicio</a></li>
+                            <li><a class="nav-link" href="#">Consultoria</a></li>
+                            <li><a class="nav-link" href="#">Productos RFID</a></li>
+                            <li><a class="nav-link" href="#">Videotutoriales</a></li>
+                            <li><a class="nav-link" href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+    </header>
+
+
+
+
+    @*<nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container-fluid">
+                <img src="~/img/NOVO_logosmall-1.png" class="logo-brand" alt="logo">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="~/img/menu.svg">
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a style="color: #F08034" class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Consultoria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Productos RFID</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Videotutoriales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>*@
 
     <div class="">
         @RenderBody()
@@ -67,18 +101,24 @@
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    @*<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    @*@Scripts.Render("~/bundles/jquery")
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>*@
+
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Content/Nav/js/jquery.slicknav.min.js"></script>
+    <script src="~/Content/Nav/js/main.js"></script>
+
+    @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)*@
 </body>
 </html>
 
 
 
-<script>    
+@*<script>    
 
     window.onscroll = function () {
         scrollFunction()
@@ -100,4 +140,4 @@
         }
     }
 
-</script>
+</script>*@

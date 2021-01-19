@@ -1,0 +1,132 @@
+
+
+/*----------------------------------
+--------- THEME DEFAULT CSS --------
+----------------------------------*/
+
+body {
+    line-height: 24px;
+    font-size: 14px;
+    color: #666666;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+}
+
+/*----------------------------
+---------- RESET CSS ---------
+----------------------------*/
+
+.flexbox-center {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/*--------------------------------------
+-------- MENU CSS START --------
+---------------------------------------*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.4s;
+    width: 100%;
+    z-index: 99;
+    padding: 18px 0;
+}
+
+.mainmenu {
+    text-align: right;
+}
+
+    .mainmenu li {
+        display: inline-block;
+        text-transform: uppercase;
+    }
+
+        .mainmenu li a {
+            display: inline-block;
+            color: #000000;
+            position: relative;
+            padding: 5px 16px;
+            margin: 0 3px;
+            border: 1px solid transparent;
+            font-weight: bold;  
+        }
+
+            .mainmenu li a:hover {
+                color: #F08034;
+            }
+
+.slicknav_menu {
+    padding: 0;
+    background: transparent;
+}
+
+    .slicknav_menu a.active,
+    .mainmenu ul li a:hover,
+    .mainmenu ul li a.active {
+        border: 1px solid #fff;
+    }
+
+.mainmenu {
+    display: block;
+}
+
+.slicknav_menu {
+    display: none;
+}
+
+.header.sticky {
+    border-bottom: 1px solid #fff;
+    background: rgba(96,125,139,0.65);
+    opacity: 1;
+}
+
+.header.sticky {
+    padding: 10px 0;
+}
+
+.mainmenu li a.appao-btn {
+    margin-left: 55px;
+}
+
+
+/*--------------------------------------
+--------- MENU CSS END ---------
+---------------------------------------*/
+
+/*--------------------------------------
+-------- HERO AREA CSS START --------
+---------------------------------------*/
+.hero-area {
+    background-image: url(../../img/fotobackground.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 90px;
+    min-height: 700px;
+    color: var(--white-color);
+}
+
+    .hero-area::before {
+        content: "";
+        top: 0;
+        left: 0;
+        opacity: 0.85;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        position: absolute;
+    }
+/*------------------------------------
+--------- HERO AREA CSS END ---------
+------------------------------------*/
