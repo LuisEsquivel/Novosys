@@ -42,7 +42,8 @@ namespace Novosys.Services
                     {
                         string readTask = responseTask.Content.ReadAsStringAsync().Result;
                         JObject json = JObject.Parse(readTask.ToString());
-                        objeto = JsonConvert.DeserializeObject<List<T>>(json["model"].ToString());
+                        var model = json["model"].ToString();
+                        objeto = JsonConvert.DeserializeObject<List<T>>(model);
                     }
                     else //web api sent error response 
                     {
@@ -60,7 +61,7 @@ namespace Novosys.Services
                 return objeto;
 
             }
-            catch (Exception)
+            catch (Exception) 
             {
                 return objeto;
             }

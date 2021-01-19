@@ -61,6 +61,15 @@ namespace NovosysWeb.CoreResources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a sendemail.
+        /// </summary>
+        internal static string EmailController {
+            get {
+                return ResourceManager.GetString("EmailController", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a api.
         /// </summary>
         internal static string Prefix {
