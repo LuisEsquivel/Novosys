@@ -155,33 +155,32 @@
                 <form id="form" class="w-100 ml-auto">
                     <div class="row">
 
-                        <!-- <div class="FormaDeContactoDetallesProductos"> -->
-                        <div class="text-white container-fluid" style="width:100%; border-radius: 20px; background-color:#001049;">
+                        <div class="container-fluid" style="width:100%; background: #D8D8D8;border-radius: 10px;">
                             <div class="form-group text-center">
                                 <h3 class="mt-2">¡Contactanos!</h3>
                             </div>
                             <div class="form-group">
                                 <center>
                                     <h5> Nombre (requerido)</h5>
-                                    <input type="text" required size="50" maxlength="50" class="form-control" placeholder="Nombre" name="NOMBRE_VAR" />
+                                    <input type="text" required size="50" maxlength="50" class="form-control" placeholder="Nombre" name="NombreVar" />
                                 </center>
                             </div>
                             <div class="form-group">
                                 <center>
                                     <h5>Email (requerido)</h5>
-                                    <input type="email" required size="80" maxlength="80" class="form-control" placeholder="Email" name="EMAIL_VAR" />
+                                    <input type="email" required size="80" maxlength="80" class="form-control" placeholder="Email" name="EmailVar" />
                                 </center>
                             </div>
                             <div class="form-group">
                                 <center>
                                     <h5>Teléfono</h5>
-                                    <input type="text" class="form-control soloNumeros" placeholder="Teléfono" name="TELEFONO_VAR" maxlength="15" minlength="8" pattern=".{8,}" title="8 caracteres minimo" />
+                                    <input type="text" class="form-control soloNumeros" placeholder="Teléfono" name="TelefonoVar" maxlength="15" minlength="8" pattern=".{8,}" title="8 caracteres minimo" />
                                 </center>
                             </div>
                             <div class="form-group">
                                 <center>
                                     <h6>Mensaje</h6>
-                                    <textarea rows="3" type="text" class="form-control" placeholder="Mensaje" name="MENSAJE_VAR" maxlength="200" minlength="10" pattern=".{10,}" required title="10 caracteres minimo"></textarea>
+                                    <textarea rows="3" type="text" class="form-control" placeholder="Mensaje" name="MensajeVar" maxlength="200" minlength="10" pattern=".{10,}" required title="10 caracteres minimo"></textarea>
                                 </center>
                             </div>
                             <div class="form-group">
@@ -189,7 +188,7 @@
                                     <input type="hidden" value="Productos/Details" name="ORIGEN_VAR" />
                                     <input type="hidden" value="@Model.CveProductoInt" name="CVE_PROD_VAR" />
                                     <input type="hidden" value="@Model.NombreVar " name="NOM_PROD_VAR" />
-                                    <button class="btn btn-danger" type="submit" onclick="Add('/Home/Email')">Enviar</button>
+                                    <button class="btn btn-secondary" type="submit" onclick="Add('/Home/Email')">Enviar</button>
                                 </center>
                             </div>
                         </div>
