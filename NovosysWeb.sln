@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1062
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiNovosys", "ApiNovoLeads\ApiNovosys.csproj", "{F84CF1FA-65F1-409F-93CD-CD4560D04B9F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovosysWeb", "NovosysWEB\NovosysWeb.csproj", "{D0AE9148-81EF-4499-8F7D-FF79E37E8EE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiNovosys", "ApiNovosys\ApiNovosys.csproj", "{47D5D86A-7B5E-46F1-9E22-64E27759BBED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F84CF1FA-65F1-409F-93CD-CD4560D04B9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F84CF1FA-65F1-409F-93CD-CD4560D04B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F84CF1FA-65F1-409F-93CD-CD4560D04B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F84CF1FA-65F1-409F-93CD-CD4560D04B9F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D0AE9148-81EF-4499-8F7D-FF79E37E8EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D0AE9148-81EF-4499-8F7D-FF79E37E8EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0AE9148-81EF-4499-8F7D-FF79E37E8EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0AE9148-81EF-4499-8F7D-FF79E37E8EE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47D5D86A-7B5E-46F1-9E22-64E27759BBED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D5D86A-7B5E-46F1-9E22-64E27759BBED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D5D86A-7B5E-46F1-9E22-64E27759BBED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D5D86A-7B5E-46F1-9E22-64E27759BBED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

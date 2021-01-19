@@ -88,7 +88,7 @@ namespace NovosysWeb.CoreResources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a https://localhost:44325/.
+        ///   Busca una cadena traducida similar a https://localhost:44362/.
         /// </summary>
         internal static string UrlBase {
             get {
