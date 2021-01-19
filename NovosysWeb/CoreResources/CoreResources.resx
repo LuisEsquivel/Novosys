@@ -124,6 +124,6 @@
     <value>productos</value>
   </data>
   <data name="UrlBase" xml:space="preserve">
-    <value>http://192.168.200.100:44325/</value>
+    <value>https://localhost:44325/</value>
   </data>
 </root>

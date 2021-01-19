@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using NovoLeadsWeb.CoreResources;
+using NovosysWeb.CoreResources;
 using System;
 using System.Collections.Generic;
 using System.Configuration;

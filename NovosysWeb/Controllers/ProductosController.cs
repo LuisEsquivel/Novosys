@@ -1,5 +1,5 @@
 ﻿using Novosys.Services;
-using NovosysWEB.Models;
+using NovosysWeb.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace NovosysWEB.Controllers
         // GET: Productos
         public ActionResult Index()
         {
-            return View();
+            return View(Get());
         }
 
 
@@ -38,7 +38,7 @@ namespace NovosysWEB.Controllers
 
             try
             {
-                o = services.Get<Producto>("producto").ToList();
+                o = services.Get<Producto>("productos").ToList();
             }
             catch (Exception)
             {
@@ -58,7 +58,7 @@ namespace NovosysWEB.Controllers
 
             try
             {
-                o = services.Get<Producto>("producto").ToList();
+                o = services.Get<Producto>("productos").ToList();
             }
             catch (Exception)
             {

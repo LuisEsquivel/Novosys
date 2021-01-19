@@ -11,7 +11,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ApiNovoLeads.Controllers
+namespace ApiNovosys.Controllers
 {
 
     /// <summary>
@@ -37,7 +37,7 @@ namespace ApiNovoLeads.Controllers
 
 
             /// <summary>
-            /// Como Se Entero Get
+            ///Productos Get
             /// </summary>
             /// <returns>lista de productos</returns>
             [HttpGet("get")]
@@ -115,7 +115,7 @@ namespace ApiNovoLeads.Controllers
 
 
             /// <summary>
-            /// Actualizar como se entero
+            /// Actualizar producto
             /// </summary>
             /// <param name="dto"></param>
             /// <returns>StatusCode 200</returns>
@@ -155,7 +155,7 @@ namespace ApiNovoLeads.Controllers
 
 
             /// <summary>
-            /// Eliminar como se entero por Id
+            /// Eliminar producto por Id
             /// </summary>
             /// <param name="Id"></param>
             /// <returns>StatusCode 200</returns>

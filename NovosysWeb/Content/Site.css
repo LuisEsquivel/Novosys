@@ -1,12 +1,58 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    /*padding-top: 50px;
+    padding-bottom: 20px;*/
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
+.presupuesto:hover,
+.servicio-domicilio:hover,
+.herramientas:hover,
+.asesoria-tecnica:hover {
+    background-color: #E0E3E0 !important;
+    height: 100% !important;
+    cursor: pointer !important;
+}
+
+
+.btn-cerrar-info {
+    border: none;
+    background-color: transparent !important;
+    display: flex !important;
+    margin-left: auto;
+    margin-top: auto;
+    height: 30px;
+    width: 25px;
+    padding-top: 2px;
+    padding-left: 10px;
+}
+
+    .btn-cerrar-info:hover {
+        color: #F08080;
+    }
+
+
+
+::placeholder { /* Firefox, Chrome, Opera */
+    color: gray !important;
+    opacity: 0.7 !important;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: gray !important;
+    opacity: 0.7 !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: gray !important;
+    opacity: 0.7 !important;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    margin-bottom: 0px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +67,733 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+
+.TextoEncabezadoMainPageOrange {
+    text-align: center;
+    color: #F08034;
+    font-weight: bold;
+}
+
+.TextoEncabezadoMainPageWhite {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.FormaDeContactoIndex {
+    text-align: "center";
+    background-color: #001049;
+    color: white;
+    font-weight: bold;
+    align-content: center;
+}
+
+.containerIndex {
+    /*position: absolute;*/
+    /*padding-top: 60px;*/
+    /*left: 50%;*/
+    width: 100%;
+    text-align: center;
+    /*transform: translatex(-50%);*/
+    /*align-items: center;*/
+}
+
+.subcontainerIndex {
+    /*position: absolute;*/
+    position: relative;
+    /*left: 50%;*/
+    width: 100%;
+    /*transform: translatex(-50%);*/
+    align-items: center;
+    width: 100%;
+    /*padding-left: 40px;*/
+}
+
+.TituloIndexSucursales {
+    text-align: center;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.DetalleIndexSucursales {
+    text-align: center;
+    font-size: medium;
+}
+
+.ImgSucursalesIndex {
+    align-content: center;
+    width: 100%;
+}
+
+.imgInstalacion {
+    align-content: center;
+    width: 130%;
+}
+
+.ImgRewards {
+    align-content: center;
+    width: 100%;
+    padding-top: 40px;
+}
+
+.TextoEncabezadoRewards {
+    text-align: center;
+    color: #F08034;
+    font-weight: bold;
+}
+
+.LeyendaInstalaciones {
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+}
+
+.TituloInstalaciones {
+    text-align: center;
+    color: #F08034;
+    font-weight: bold;
+}
+
+.DetalleTextFormSucursales {
+    text-align: center;
+    font-size: medium;
+    vertical-align: central;
+    text-align: center;
+    height: 100%;
+    padding-top: 40px;
+    font-weight: bold;
+}
+
+.GridSucuralesFormSucursales {
+    border-top: solid;
+    border-color: #F08034;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
+
+.card-bordes {
+    /*border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;*/
+    border-color: #F08034;
+}
+
+.card-font-detail {
+    text-align: center;
+    color: #F08034;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.card-product:after {
+    content: "";
+    display: table;
+    clear: both;
+    visibility: hidden;
+}
+
+.card-product .price-new, .card-product .price {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    border-color: #F08034;
+    padding-bottom: 10px;
+    font-size: medium;
+    font-family: Calibri;
+}
+
+.card-product .price-old {
+    color: #999;
+}
+
+.card-product .img-wrap {
+    padding-top: 5px;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+    .card-product .img-wrap img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+.card-product .info-wrap {
+    overflow: hidden;
+    padding: 15px;
+    padding-top: 5px;
+    height: 185px !important;
+    min-height: 185px !important;
+    border-top: 1px solid;
+    border-color: #F08034;
+}
+
+.card-product .action-wrap {
+    padding-top: 4px;
+    margin-top: 4px;
+    align-content: flex-end;
+    width: 100%;
+}
+
+.card-product .bottom-wrap {
+    padding: 15px;
+    border-top: 1px solid #F08034;
+}
+
+.card-product .title {
+    margin-top: 0;
+}
+
+.my-flex-card > div > div.card {
+    height: calc(100% - 15px);
+    margin-bottom: 15px;
+}
+
+.TextoEncabezadoDetailProduct {
+    text-align: left;
+    color: #F08034;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.TextoDetailProduct {
+    text-align: left;
+    color: black;
+    font-family: Gadugi;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+.fondoColorInstitucional {
+    background-color: #001049;
+}
+
+.TopIndex {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*align-content:center;
+    width:100%;*/
+    /*padding-left:50px;*/
+}
+
+.navBarDesignpropio {
+    /*background-color: #001049;*/
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.TablaMenuMain {
+    border-bottom: solid;
+    border-top: solid;
+    border-color: #F08034;
+}
+
+
+
+.navBarDesignProductos {
+    width: 100%;
+    color: #F08034;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.TablaMenuProductos {
+    text-align: "center";
+    background-color: white;
+    font-size: large;
+    font-weight: bold;
+    border-bottom: solid;
+    border-top: solid;
+    border-color: #F08034;
+    width: 100%;
+}
+
+/*.dropdown-submenu {
+    position: relative;
+}
+
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+    }
+
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #F08034;
+    background-color: transparent;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+    .dropdown-submenu > .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -6px;
+        margin-left: -1px;
+        -webkit-border-radius: 0 6px 6px 6px;
+        -moz-border-radius: 0 6px 6px 6px;
+        border-radius: 0 6px 6px 6px;
+    }
+
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-submenu > a:after {
+        display: block;
+        content: " ";
+        float: right;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-left-color: #cccccc;
+        margin-top: 5px;
+        margin-right: -10px;
+    }
+
+    .dropdown-submenu:hover > a:after {
+        border-left-color: #ffffff;
+    }
+
+    .dropdown-submenu.pull-left {
+        float: none;
+    }
+
+        .dropdown-submenu.pull-left > .dropdown-menu {
+            left: -100%;
+            margin-left: 10px;
+            -webkit-border-radius: 6px 0 6px 6px;
+            -moz-border-radius: 6px 0 6px 6px;
+            border-radius: 6px 0 6px 6px;
+        }*/
+
+.formatoItemsMenu {
+    color: #001049;
+    font-size: large;
+}
+
+.BannerPrincipalFormato {
+    margin-left: 0;
+}
+
+.FormatoTitutloDetailsProductos {
+    text-align: center;
+    color: #F08034;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.FormaDeContactoDetallesProductos {
+    text-align: "center";
+    /*background-color: #001049;*/
+    color: black;
+    font-weight: bold;
+    align-content: center;
+    padding-top: 15px;
+}
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    #myImg:hover {
+        opacity: 0.7;
+    }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    margin-top: 11%;
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+#galeria img {
+    width: 100%;
+    height: 250px;
+}
+
+#galeria .col-lg-4 {
+    margin: 0 !important;
+    padding: 25px;
+}
+
+#galeria img:hover {
+    border: 15px solid #ffffff;
+}
+
+#galeria .text-center {
+    color: #808080;
+}
+
+
+.footer {
+    background-color: #001049;
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+    height: 370px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.card-img {
+    height: 120px !important;
+}
+
+.card-img-top {
+    width: 100%;
+    object-fit: scale-down;
+}
+
+
+.card-body {
+    /*height: 150px !important; */ /*con el boton de ficha técnica*/
+    height: 100px !important; /*sin el boton de ficha técnica*/
+}
+
+.card-footer {
+    height: 185px !important;
+    border-color: #172C80 !important;
+}
+
+.letra {
+    color: #172C80 !important;
+    font-weight: bold;
+}
+
+
+.bgBlue {
+    background-color: #172C80 !important;
+}
+
+
+
+/*
+ media querys of corousel responsive bootstrap 4 
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Show 4th slide on md if col-md-4*/
+    .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%; /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    .chosen-container-single, chosen-drop {
+        width: calc(100vw - 5vw) !important;
+        display: block !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Show 3rd slide on sm if col-sm-6*/
+    .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%; /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+
+@media (min-width: 576px) {
+    .carousel-item {
+        margin-right: 0;
+    }
+    /* show 2 items */
+    .carousel-inner .active + .carousel-item {
+        display: block;
+    }
+
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+        transition: none;
+    }
+
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* farthest right hidden item must be also positioned for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* MD */
+@media (min-width: 768px) {
+    /* show 3rd of 3 item slide */
+    .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* LG */
+@media (min-width: 991px) {
+    /* show 4th item */
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+        display: block;
+    }
+
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    /* Show 5th slide on lg if col-lg-3 */
+    .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%; /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction //t - previous slide direction last item animation fix */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+
+
+/*@media(max-width:768px){
+        .chosen-container-single, chosen-drop {
+            width: calc(100vw - 5vw) !important;
+            display: block !important;
+        }
+      }*/
+
+
+@media(max-width: 991px) {
+    .padding-add {
+        padding-top: 0px !important;
+    }
+
+
+    .chosen-container-single, chosen-drop {
+        width: calc(100vw - 10vw) !important;
+        display: block !important;
+    }
+
+    #search {
+        position: initial !important;
+        width: 100vw !important;
+        left: 0px !important;
+        display: flex;
+        justify-content: center !important;
+        margin-top: 20px;
+        padding-bottom: 15px;
+        margin-left: 0px !important;
+        top: 0px !important;
+    }
+}
+
+
+
+.padding-add {
+    padding-top: 25px;
+}
+
+
+
+#search {
+    position: absolute;
+    /*width: 30%;
+            left: calc(100% - 29%);*/
+    width: 100% !important;
+    right: 1% !important;
+    bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+    /*top: 70px;*/
+}
+
+.chosen-container-single, .chosen-search, chosen-drop {
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+
+.chosen-drop {
+    margin-top: 10px !important;
+}
+
+
+.chosen-single {
+    width: 100% !important;
+    height: 35px !important;
+    padding-top: 5px !important;
+}
+
+
+.chosen-search {
+    width: 100% !important;
+    display: block !important;
+    justify-content: center !important;
+}
+
+    .chosen-search > input {
+        text-transform: uppercase;
+    }
+
+
+.active-result {
+    display: block !important;
+    text-align: start !important;
+    background-size: 35px 35px !important;
+    background-repeat: no-repeat !important;
+    background-position: right !important;
 }
